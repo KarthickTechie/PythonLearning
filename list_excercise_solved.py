@@ -20,6 +20,8 @@
 # strings where the string length is 2 or more and the first
 # and last chars of the string are the same.
 # Note: python does not have a ++ operator, but += works.
+from operator import itemgetter
+
 def match_ends(words):
   # +++your code here+++
   result = []
@@ -60,7 +62,8 @@ def front_x(words):
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
   # +++your code here+++
-  return
+  
+  return sorted(tuples,key=itemgetter(1))
 
 
 # Simple provided test() function used in main() to print
